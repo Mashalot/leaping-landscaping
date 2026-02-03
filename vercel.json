@@ -1,0 +1,17 @@
+{
+  "buildCommand": "next build",
+  "devCommand": "next dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "github": {
+    "enabled": false
+  },
+  "env": [
+    {
+      "key": "NEXT_PUBLIC_SITE_URL",
+      "description": "Your deployed site URL",
+      "value": "https://leaping-landscaping.vercel.app",
+      "type": "string"
+    }
+  ]
+}
