@@ -1,40 +1,42 @@
+import { Star, Users, Palette, Sparkles, Clock, Handshake } from 'lucide-react'
+
 export default function WhyChooseUs() {
   const benefits = [
     {
       id: 1,
       title: '5-Star Rated',
       description: 'Trusted by hundreds of satisfied customers in Toronto with excellent reviews.',
-      icon: '⭐',
+      icon: Star,
     },
     {
       id: 2,
       title: 'Professional Team',
       description: 'Experienced landscapers with years of expertise in garden and hardscape design.',
-      icon: '👥',
+      icon: Users,
     },
     {
       id: 3,
       title: 'Custom Solutions',
       description: 'Personalized designs tailored to your budget, style, and property needs.',
-      icon: '🎨',
+      icon: Palette,
     },
     {
       id: 4,
       title: 'Quality Materials',
       description: 'We use premium, durable materials that stand the test of time.',
-      icon: '✨',
+      icon: Sparkles,
     },
     {
       id: 5,
       title: 'Timely Completion',
       description: 'Projects completed on schedule and within agreed budget parameters.',
-      icon: '⏰',
+      icon: Clock,
     },
     {
       id: 6,
       title: 'Ongoing Support',
       description: 'Maintenance packages and support to keep your landscape looking beautiful.',
-      icon: '🤝',
+      icon: Handshake,
     },
   ]
 
@@ -54,7 +56,9 @@ export default function WhyChooseUs() {
               key={benefit.id}
               className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="text-5xl mb-4">{benefit.icon}</div>
+              <div className="mb-4">
+                <benefit.icon size={64} className="text-secondary" />
+              </div>
               <h3 className="text-xl font-bold text-primary mb-3">{benefit.title}</h3>
               <p className="text-gray-600">{benefit.description}</p>
             </div>

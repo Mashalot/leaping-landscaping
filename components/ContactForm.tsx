@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent, ChangeEvent } from 'react'
+import { Check } from 'lucide-react'
 
 interface FormData {
   name: string
@@ -121,7 +122,9 @@ export default function ContactForm() {
         <div className="bg-light rounded-lg shadow-lg p-8 md:p-12">
           {submitted ? (
             <div className="text-center py-8">
-              <div className="text-5xl mb-4">✓</div>
+              <div className="flex justify-center mb-4">
+                <Check size={64} className="text-secondary" />
+              </div>
               <h3 className="text-2xl font-bold text-secondary mb-2">Thank You!</h3>
               <p className="text-gray-700">
                 We've received your message and will get back to you soon.

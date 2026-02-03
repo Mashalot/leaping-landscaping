@@ -1,24 +1,26 @@
+import { Leaf, Hammer, Wrench, Check } from 'lucide-react'
+
 export default function Services() {
   const services = [
     {
       id: 1,
       title: 'Garden Design',
       description: 'Custom garden designs tailored to your style and property. We create stunning landscapes that reflect your vision.',
-      icon: '🌱',
+      icon: Leaf,
       features: ['Site planning', 'Plant selection', 'Color schemes', 'Layout design'],
     },
     {
       id: 2,
       title: 'Hardscaping',
       description: 'Professional hardscape installation including patios, walkways, retaining walls, and outdoor structures.',
-      icon: '🪨',
+      icon: Hammer,
       features: ['Patio design', 'Retaining walls', 'Walkways', 'Drainage solutions'],
     },
     {
       id: 3,
       title: 'Maintenance',
       description: 'Ongoing lawn and garden maintenance to keep your outdoor space looking beautiful year-round.',
-      icon: '🛠️',
+      icon: Wrench,
       features: ['Lawn care', 'Pruning', 'Weeding', 'Seasonal cleanup'],
     },
   ]
@@ -40,7 +42,9 @@ export default function Services() {
               className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8"
             >
               {/* Icon */}
-              <div className="text-5xl mb-4">{service.icon}</div>
+              <div className="mb-4">
+                <service.icon size={64} className="text-secondary" />
+              </div>
 
               {/* Title */}
               <h3 className="text-2xl font-bold text-primary mb-3">{service.title}</h3>
@@ -52,7 +56,7 @@ export default function Services() {
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-700">
-                    <span className="text-secondary mr-2">✓</span>
+                    <Check size={20} className="text-secondary mr-2 flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
