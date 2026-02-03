@@ -1,3 +1,5 @@
+import { Star } from 'lucide-react'
+
 export default function Hero() {
   return (
     <section id="home" className="relative bg-gradient-to-r from-primary to-dark py-20 md:py-32 text-white overflow-hidden">
@@ -32,8 +34,10 @@ export default function Hero() {
               </a>
             </div>
             <div className="flex items-center space-x-4 pt-4">
-              <div className="flex text-yellow-400">
-                {'⭐'.repeat(5)}
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={24} className="fill-yellow-400 text-yellow-400" />
+                ))}
               </div>
               <p className="text-gray-200">5-Star Rated | Trusted by Toronto Homeowners</p>
             </div>
